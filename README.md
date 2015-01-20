@@ -1,5 +1,5 @@
 # GettingAndCleaningData
-Holds Codebook, README.MD, run_analysis.r and supporting files.
+Repository holds Codebook, README.MD, run_analysis.r scriptand other supporting files.
 
 ## Script review:
 * Lines 1-3 identify required libraries.
@@ -7,11 +7,17 @@ Holds Codebook, README.MD, run_analysis.r and supporting files.
 * Lines 7-15 read and combine the Test & Train - observations (xData), subjects (subData) and activities codes (yData) data into separate data frames
 * Lines 16-19 reads the features names, modifies them to acceptable variable names and loads them as column names for the combined observation data frame (xData)
 * Line 20 selects the observation data frame columns matching the criteria of Mean and Standard Deviation into a new data frame (xsData)*
-* Lines 21-22 read activities labels  into an activity label data frame (actTable) and then join with the activities codes data frame to create the activities data frame  (yaData)
+* Lines 21-22 read activities labels  into an activity label data frame (actTable) and then joins with the activities codes data frame to create the activities data frame  (yaData) 
+* Lines 23-34 Combinds the activities data frame (yaData) and the selected observation columns (xsData) producing the (nxsData) and adding the activities and naming column 1 of the new data frame to aCtivities
+* Line 25 removes unneeded data frames
+* Lines 26-27 Combinds the subject data frame (subData) and the named observations data frame (nxsData) creating the full data frame (snxsData)  and naming column 1 of the new data frame to sUbject
+* Line 28 groups the full data frame by sUbject and aCtivities creating the grouped data frame (gsnxsData)
+* Line 29 summarises each of the columns of the grouped data frame (gsnxsData)  on the function mean by the groupings variables - while exlcuding the grouping variables from the summary creating a data frame (sgsnxsData)
+* Line 30 writes the table to a txt file in the working directory
 
     
         
-### Script      
+###  run_analysis.r    
     library(httr)  
     library(sqldf)  
     library(dplyr)  
@@ -42,3 +48,7 @@ Holds Codebook, README.MD, run_analysis.r and supporting files.
     gsnxsData<-group_by(snxsData, sUbject, aCtivity)  
     sgsnxsData<-summarise_each(gsnxsData, funs(mean))  
     write.table(sgsnxsData, file="SmartPhoneDataBySubAct.txt", row.names=FALSE)  
+    
+    
+##Tidy Data
+    What defines a tidy data set? 

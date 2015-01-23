@@ -208,7 +208,9 @@ Their descriptions are equivalent.
 ##Results
 Were written out to the file SmartPhoneDataBySubAct.txt  
 
-File contains the means for the selected 72 variables group by subject and activity.
+File contains the means for the selected 72 variables group by subject and activity.  
+
+SAMPLE:
 
 ![Results](results.JPG)
 

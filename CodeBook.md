@@ -16,9 +16,9 @@
     "UCI HAR Dataset"  (ZipFile)  
 
 
+## Supporting Files - sourced from the download 
 
-
-##README.txt 
+###README.txt 
 Provides a description of the purpose for and methods used to compile the Human Activity Recognition Using Smartphones Dataset and - - -  
 
 * Detail infomation about what is provided in each record
@@ -28,7 +28,7 @@ Provides a description of the purpose for and methods used to compile the Human 
 	+ Each feature vector is a row on the text file. 
 * License information regarding the use of the raw data 
 
-##features_info.txt 
+###features_info.txt 
 
 Defines data set that is the source of raw data used for this effort. It includes the accelerometer and gyroscope 3-axial raw signals and the individual measurements, These elements are the bases for the data submitted for this project. Shows information about the variables used on the feature vector.
 
@@ -36,7 +36,7 @@ Defines data set that is the source of raw data used for this effort. It include
 * The set of variables that were estimated from these signals are:
 * Additional vectors obtained by averaging the signals used on the angle() variable:
 
-###The dataset includes the following files:  
+####The dataset includes the following files:  
 
 * 'README.txt'
 * 'features_info.txt': Shows information about the variables used on the feature vector.
@@ -47,7 +47,7 @@ Defines data set that is the source of raw data used for this effort. It include
 * 'test/X_test.txt': Test set.
 * 'test/y_test.txt': Test labels.
 
-###The following files are available for the train and test data. 
+####The following files are available for the train and test data. 
 
 Their descriptions are equivalent. 
 
@@ -56,7 +56,7 @@ Their descriptions are equivalent.
 * 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 * 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
-###Notes: 
+####Notes: 
 
 * Features are normalized and bounded within [-1,1].
 * Each feature vector is a row on the text file.

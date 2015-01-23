@@ -1,5 +1,5 @@
 # GettingAndCleaningData
-Repository holds CodeBook.md, README.md, run_analysis.r script and other supporting files.
+Repository holds CodeBook.md, README.md, run_analysis.R script and other supporting files.
 
 ## Script review:
 * Lines 1-3 identify required libraries.
@@ -7,17 +7,17 @@ Repository holds CodeBook.md, README.md, run_analysis.r script and other support
 * Lines 7-15 read and combine the Test & Train - observations (xData), subjects (subData) and activities codes (yData) data into unique combined data frames
 * Lines 16-19 reads the features names, modifies them to acceptable variable names, adds a ".mean.." and loads them as column names for the combined observation data frame (xData)
 * Line 20 selects the observation data frame columns matching the criteria of Mean and Standard Deviation into a new data frame (xsData)*
-* Lines 21-22 read activities labels  into an activity label data frame (actTable) and then joins with the activities codes data frame to create the activities data frame  (yaData) 
-* Lines 23-34 Combines the activities data frame (yaData) and the selected observation columns (xsData) producing the (nxsData) and adding the activities and naming column 1 of the new data frame to aCtivities
+* Lines 21-22 read activities labels  into an activity label data frame (actTable) and then joins with the activities codes data frame (yData) to create the activities data frame  (yaData) 
+* Lines 23-34 Combines the activities data frame (yaData) and the selected observation columns (xsData) producing the (nxsData) adding the activities and naming column 1 of the new data frame to aCtivities
 * Line 25 removes unneeded data frames
-* Lines 26-27 Combinds the subject data frame (subData) and the named observations data frame (nxsData) creating the full data frame (snxsData)  and naming column 1 of the new data frame to sUbject
+* Lines 26-27 Combines the subject data frame (subData) and the named observations data frame (nxsData) creating the full data frame (snxsData)  and naming column 1 of the new data frame to sUbject
 * Line 28 groups the full data frame by sUbject and aCtivities creating the grouped data frame (gsnxsData)
-* Line 29 summaries each of the columns of the grouped data frame (gsnxsData)  on the function mean by the groupings variables - while excluding the grouping variables from the summary creating a data frame (sgsnxsData)
+* Line 29 summaries each of the columns of the grouped data frame (gsnxsData)  on the function mean by the groupings variables (sUbject,aCtivites) creating a grouped data frame (sgsnxsData)
 * Line 30 writes the table to a txt file in the working directory  
 
 
         
-###  run_analysis.r    
+###  run_analysis.R    
     library(httr)  
     library(sqldf)  
     library(dplyr)  
